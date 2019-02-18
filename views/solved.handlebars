@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Example App</title>
+</head>
+<body>
+    <h1 align="center">Sudoku Solver</h1>
+
+	<div style="width:100%;text-align:center;">
+	<h2>Given Sudoku</h2>
+	{{#each sudoku}}
+		{{#each this}}
+			{{#if this}}
+				{{this}}
+			{{else}}
+				0
+			{{/if}}
+			&nbsp;&nbsp;
+		{{/each}}
+		<br>
+	{{/each}}
+	</div>
+
+	{{#if solution}}
+		<div style="width:100%;text-align:center;">
+		<h2>Solution of sudoku</h2>
+		{{#each solution}}
+			{{#each this}}
+				{{this}}&nbsp;&nbsp;
+			{{/each}}
+			<br>
+		{{/each}}
+		</div>
+    {{/if}}
+
+    <br>
+    <div style="width:100%;text-align:center;">
+    	<a href="/">Try Another</a>
+    </div>
+</body>
+</html>

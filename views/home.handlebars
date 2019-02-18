@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Example App</title>
+</head>
+<body>
+    <h1 align="center">Sudoku Solver</h1>
+
+    <form name="sudoku" method="post">
+	    <table align="center" border="1">
+	    {{#each rows as | row_value row_key|}}
+	    	<tr>
+	    	{{#each ../cols as | col_value col_key|}}
+		    	<td width="30" height="30">
+		    		<input type="text" style="width:30px;height:30px;" name="cells[{{row_value}}][{{col_value}}]">
+		    	</td>
+	    	{{/each}}
+	    	</tr>
+		{{/each}}
+		</table>
+
+		<div style="width:100%;text-align:center;margin:10px;">
+			<input type="submit" value="Solve">
+			<input type="reset" value="reset">
+		</div>
+	</form>
+
+	{{#if solution}}
+		<div style="width:100%;text-align:center;">
+		<h2>Solution of sudoku</h2>
+		{{#each solution}}
+			{{#each this}}
+				{{this}}&nbsp;&nbsp;
+			{{/each}}
+			<br>
+		{{/each}}
+		</div>
+    {{/if}}
+</body>
+</html>
