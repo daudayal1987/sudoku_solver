@@ -1,7 +1,7 @@
 # sudoku_solver
 Solve sudoku using simple backtracking algorithm
 
-# Dependencies
+# Environment
 Node
 
 # How to run
