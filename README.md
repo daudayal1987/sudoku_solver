@@ -2,7 +2,7 @@
 Solve sudoku using simple backtracking algorithm
 
 # Dependencies
-Node & ExpressJS
+Node
 
 # How to run
 1) Copy the repository
